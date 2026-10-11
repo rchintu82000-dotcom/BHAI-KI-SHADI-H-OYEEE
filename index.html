@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sneha & Rajnish — Wedding Invitation | 26 November 2026</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="With the blessings of our elders and families, join us in celebrating the wedding of Sneha Anand and Rajnish on 26 November 2026 in Katihar, Bihar.">
+  <meta property="og:title" content="Sneha & Rajnish — Wedding Invitation 💍">
+  <meta property="og:description" content="Two families, one beautiful beginning! Join us to celebrate on 26 November 2026.">
+  <meta property="og:type" content="website">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Canvas for festive confetti & petal animations -->
+  <canvas id="confettiCanvas" class="confetti-canvas" aria-hidden="true"></canvas>
+
+  <!-- ========================================================= -->
+  <!-- SECTION A: WELCOME SCREEN / WEDDING ENVELOPE (INTERACTIVE) -->
+  <!-- ========================================================= -->
+  <aside id="welcomeScreen" class="welcome-screen" aria-label="Wedding Invitation Envelope">
+    <div class="welcome-bg-overlay"></div>
+    
+    <!-- Floating Petals Decorative Layer -->
+    <div class="petals-container" aria-hidden="true">
+      <span class="petal p1">🌸</span>
+      <span class="petal p2">✨</span>
+      <span class="petal p3">🌺</span>
+      <span class="petal p4">🌼</span>
+      <span class="petal p5">✨</span>
+      <span class="petal p6">🌸</span>
+    </div>
+
+    <div class="envelope-wrapper">
+      <!-- Traditional Shubh Vivah / Auspicious Ganesha Emblem -->
+      <div class="auspicious-symbol" aria-hidden="true">
+        <svg class="om-symbol" viewBox="0 0 100 100" width="46" height="46" fill="currentColor">
+          <path d="M50 12 C44 12, 38 16, 36 21 C34 26, 37 31, 41 33 C33 35, 27 41, 26 49 C25 57, 30 65, 38 68 C35 73, 36 80, 42 85 C48 90, 56 90, 62 86 C68 82, 70 75, 68 69 C75 66, 80 59, 80 50 C80 40, 72 32, 62 31 C65 26, 64 19, 58 14 C55 12, 52 12, 50 12 Z M50 20 C52 20, 54 22, 54 25 C54 28, 51 30, 49 30 C46 30, 44 28, 44 25 C44 22, 47 20, 50 20 Z" />
+        </svg>
+        <span class="sub-mantra">॥ श्री गणेशाय नमः ॥</span>
+      </div>
+
+      <!-- Envelope Card Frame -->
+      <div class="envelope-card">
+        <div class="royal-corner top-left"></div>
+        <div class="royal-corner top-right"></div>
+        <div class="royal-corner bottom-left"></div>
+        <div class="royal-corner bottom-right"></div>
+
+        <div class="envelope-inner-content">
+          <div class="traditional-motif" aria-hidden="true">
+            <span class="kalash-icon">🪔</span>
+            <div class="gold-divider-line"></div>
+            <span class="kalash-icon">🪔</span>
+          </div>
+
+          <p class="welcome-blessing">With the blessings of our families</p>
+          <p class="welcome-subline">Two families, one beautiful beginning</p>
+
+          <div class="welcome-names-box">
+            <h1 class="welcome-couple-names">Sneha Anand <span class="heart-accent">&</span> Rajnish</h1>
+            <p class="welcome-tagline">Are getting married!</p>
+          </div>
+
+          <div class="welcome-date-badge">
+            <span class="calendar-icon">📅</span>
+            <strong class="highlight-date">26 November 2026</strong>
+          </div>
+
+          <!-- Open Button -->
+          <button id="openInvitationBtn" class="btn-royal-primary" type="button">
+            <span class="btn-text">Open Our Wedding Invitation 💌</span>
+            <span class="btn-glow"></span>
+          </button>
+
+          <!-- Bypass Option -->
+          <button id="skipWelcomeBtn" class="btn-link-skip" type="button">
+            Skip directly to wedding details ↓
+          </button>
+        </div>
+      </div>
+      <p class="envelope-hint">Tap the button to open your personalized card</p>
+    </div>
+  </aside>
+
+  <!-- ========================================================= -->
+  <!-- MAIN SITE NAVIGATION BAR (STICKY) -->
+  <!-- ========================================================= -->
+  <header id="mainHeader" class="main-header">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-monogram">S & R</span>
+        <span class="brand-date">26.11.2026</span>
+      </a>
+
+      <button id="navToggle" class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+
+      <ul id="navList" class="nav-menu">
+        <li><a href="#invitation" class="nav-link">Invitation</a></li>
+        <li><a href="#families" class="nav-link">Families</a></li>
+        <li><a href="#story" class="nav-link">Our Story 😂</a></li>
+        <li><a href="#committee" class="nav-link">Wedding Committee</a></li>
+        <li><a href="#countdown" class="nav-link">Countdown</a></li>
+        <li><a href="#venue" class="nav-link">Venue</a></li>
+        <li><a href="#blessings" class="nav-link">Blessings ❤️</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="mainContent" class="main-wrapper">
+    <!-- Traditional Marigold Top Garland Bar -->
+    <div class="marigold-garland" aria-hidden="true">
+      <div class="marigold-row">
+        <span>🌼</span><span>🟠</span><span>🌼</span><span>🟠</span><span>🌼</span><span>🟠</span><span>🌼</span><span>🟠</span>
+        <span>🌼</span><span>🟠</span><span>🌼</span><span>🟠</span><span>🌼</span><span>🟠</span><span>🌼</span><span>🟠</span>
+      </div>
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- HERO / BANNER HEADER -->
+    <!-- ========================================================= -->
+    <section id="hero" class="hero-section text-center">
+      <div class="ornament-mandala" aria-hidden="true"></div>
+      <p class="sacred-heading">॥ शुभ विवाह ॥</p>
+      <p class="hero-eyebrow">With the blessings of our elders & Almighty</p>
+      
+      <h2 class="hero-couple-title">
+        <span class="bride-name">Sneha Anand</span>
+        <span class="weds-badge">weds</span>
+        <span class="groom-name">Rajnish</span>
+      </h2>
+
+      <div class="hero-date-ribbon">
+        <span class="ribbon-leaf">🌿</span>
+        <span class="ribbon-text">Thursday, 26 November 2026</span>
+        <span class="ribbon-leaf">🌿</span>
+      </div>
+
+      <p class="hero-location-preview">Officer’s Colony, Ward No. 7 • Katihar, Bihar</p>
+      
+      <div class="scroll-down-indicator" aria-hidden="true">
+        <span>Scroll to explore</span>
+        <svg class="chevron-down" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" fill="none" stroke-width="2">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECTION B: THE MAIN WEDDING INVITATION -->
+    <!-- ========================================================= -->
+    <section id="invitation" class="section-card-wrapper">
+      <div class="container">
+        <div class="ornate-invitation-card royal-arch-shape">
+          <div class="inner-gold-border">
+            <div class="jharokha-top-crest" aria-hidden="true">
+              <span class="lotus-icon">🪷</span>
+            </div>
+
+            <div class="card-header text-center">
+              <span class="section-badge">Official Invitation</span>
+              <h2 class="section-title">The Wedding Invitation</h2>
+              <div class="ornate-divider" aria-hidden="true">
+                <span class="divider-line"></span>
+                <span class="divider-flower">❦</span>
+                <span class="divider-line"></span>
+              </div>
+            </div>
+
+            <div class="invitation-text-body text-center">
+              <p class="invitation-lead">
+                With immense joy and the blessings of our elders, we invite you to celebrate the wedding of 
+                <strong class="highlight-name">Sneha Anand</strong> and <strong class="highlight-name">Rajnish</strong>.
+              </p>
+
+              <p class="invitation-paragraph">
+                What began with the hopes and blessings of two families is becoming a beautiful new chapter for two hearts.
+              </p>
+
+              <p class="invitation-paragraph">
+                We would be delighted to have you with us as we celebrate love, family, traditions, laughter, and the beginning of a lifetime together.
+              </p>
+
+              <div class="invitation-quote-highlight">
+                <span class="quote-mark">“</span>
+                Your presence and blessings will make our special day even more memorable.
+                <span class="quote-mark">”</span>
+              </div>
+
+              <div class="invitation-signoff">
+                <p class="signoff-prefix">With love and warm regards,</p>
+                <p class="signoff-family">The Anand Families</p>
+              </div>
+            </div>
+
+            <!-- Decorative Bottom Garland -->
+            <div class="card-bottom-motif" aria-hidden="true">
+              <span>🌾</span><span>✨</span><span>🪔</span><span>✨</span><span>🌾</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+     <!-- ========================================================= -->
+    <!-- SECTION C: MEET THE FAMILIES -->
+    <!-- ========================================================= -->
+    <section id="families" class="families-section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-badge">Roots &amp; Pillars</span>
+          <h2 class="section-title">Meet the Families</h2>
+          <p class="section-subtitle">Two loving families joining hands with equal pride, blessings, and warmth.</p>
+          <div class="ornate-divider" aria-hidden="true">
+            <span class="divider-line"></span>
+            <span class="divider-flower">🌸</span>
+            <span class="divider-line"></span>
+          </div>
+        </div>
+
+        <div class="families-grid">
+          
+          <!-- Bride's Family Card -->
+          <div class="family-card bride-family">
+            <div class="family-card-ornament" aria-hidden="true">🪷</div>
+            <span class="family-side-pill">Bride’s Family</span>
+            <h3 class="family-person-name">Sneha Anand</h3>
+            <div class="family-relation-box">
+              <p class="relation-role">Cherished Daughter of</p>
+              <p class="parents-names">Pranav Singh &amp; Ranjeeta Devi</p>
+            </div>
+            <div class="family-blessing-note">
+              <p>Welcoming the baraat with open hearts, traditional sweets, and endless love!</p>
+            </div>
+          </div>
+
+          <!-- Groom's Family Card -->
+          <div class="family-card groom-family">
+            <div class="family-card-ornament" aria-hidden="true">🪔</div>
+            <span class="family-side-pill">Groom’s Family</span>
+            <h3 class="family-person-name">Rajnish Anand</h3>
+            <div class="family-relation-box">
+              <p class="relation-role">Beloved Son of</p>
+              <p class="parents-names">Nand Kishore Singh &amp; Archana Singh</p>
+            </div>
+            <div class="family-blessing-note">
+              <p>Ready with dhol, excitement, and immense pride to welcome their new daughter!</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Gentle Humorous Caption Required -->
+        <div class="family-humor-callout text-center">
+          <span class="humor-emoji" aria-hidden="true">☕ 😄</span>
+          <p class="humor-text">
+            “Two families, countless blessings, and approximately a million wedding-planning discussions!”
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECTION D: OUR ARRANGED MARRIAGE STORY 😂❤️ -->
+    <!-- ========================================================= -->
+    <section id="story" class="story-section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-badge">How It All Happened</span>
+          <h2 class="section-title">Our Arranged Marriage Story 😂❤️</h2>
+          <p class="section-subtitle">
+            From biodata exchanges to endless wedding calls: a 100% desi journey!
+          </p>
+          <div class="ornate-divider" aria-hidden="true">
+            <span class="divider-line"></span>
+            <span class="divider-flower">💌</span>
+            <span class="divider-line"></span>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline-container">
+          
+          <!-- Milestone 1 -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-number">1</span>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-tag">Stage 1: The First Samosa</span>
+              <h3 class="milestone-title">The Family Meeting</h3>
+              <p class="milestone-desc">
+                Two families meet, exchange polite smiles, test the temperature of the chai, and try their absolute best to make a wonderful first impression!
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 2 -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-number">2</span>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-tag">Stage 2: Top Secret Intel</span>
+              <h3 class="milestone-title">The Background Verification</h3>
+              <p class="milestone-desc">
+                Suddenly, everyone becomes a professional detective! Qualifications, hobbies, family history, kundali charts, and every available detail are thoroughly discussed.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 3 -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-number">3</span>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-tag">Stage 3: The Boardroom Review</span>
+              <h3 class="milestone-title">The Approval Committee</h3>
+              <p class="milestone-desc">
+                Parents, relatives, second cousins, and well-wishers have their opinions. The unofficial supreme committee meeting is officially in session!
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 4 -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-number">4</span>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-tag">Stage 4: Rishta Pakka!</span>
+              <h3 class="milestone-title">The Final Verdict</h3>
+              <p class="milestone-desc">
+                Two families give their wholehearted blessings, sweets are distributed at record speed, and two people begin a sweet new journey together.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 5 -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-number">5</span>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-tag">Stage 5: 26 November 2026</span>
+              <h3 class="milestone-title">Wedding Day!</h3>
+              <p class="milestone-desc">
+                The planning, heavy shopping bags, midnight phone calls, and family discussions finally lead to the grand celebration!
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Mandatory Funny Captions -->
+        <div class="story-captions-box">
+          <div class="caption-card">
+            <span class="caption-icon" aria-hidden="true">📱🔍</span>
+            <p>
+              “Some love stories start with a dating app. Ours came with family introductions, blessings, and a full investigation department.”
+            </p>
+          </div>
+          <div class="caption-card">
+            <span class="caption-icon" aria-hidden="true">💍📋</span>
+            <p>
+              “Relationship status: Family-approved. Wedding pending. Relatives already excited.”
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECTION E: THE OFFICIAL WEDDING COMMITTEE 🤭 -->
+    <!-- ========================================================= -->
+    <section id="committee" class="committee-section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-badge">Behind The Scenes</span>
+          <h2 class="section-title">The Wedding Management Department 🤭</h2>
+          <p class="section-subtitle">
+            Every Indian wedding runs on love, blessings, and an unofficial corporate structure!
+          </p>
+          <div class="ornate-divider" aria-hidden="true">
+            <span class="divider-line"></span>
+            <span class="divider-flower">👑</span>
+            <span class="divider-line"></span>
+          </div>
+        </div>
+
+        <div class="committee-cards-grid">
+          
+          <!-- Card 1: The Parents -->
+          <div class="committee-card">
+            <div class="dept-icon-circle">
+              <span>🙏✨</span>
+            </div>
+            <h3 class="dept-role">Chief Blessing Officers</h3>
+            <p class="dept-title">The Parents</p>
+            <p class="dept-desc">
+              Managing guest lists, supervising caterers, approving outfits, and giving unmeasured love and blessings every single minute.
+            </p>
+          </div>
+
+          <!-- Card 2: The Relatives -->
+          <div class="committee-card">
+            <div class="dept-icon-circle">
+              <span>🧐💬</span>
+            </div>
+            <h3 class="dept-role">Department of Questions</h3>
+            <p class="dept-title">The Relatives</p>
+            <p class="dept-desc">
+              Specialists in asking: “Beta, what time is the muhurat?”, “Menu mein kya kya hai?”, and ensuring no one feels left out.
+            </p>
+          </div>
+
+          <!-- Card 3: The Friends -->
+          <div class="committee-card">
+            <div class="dept-icon-circle">
+              <span>🕺💃</span>
+            </div>
+            <h3 class="dept-role">Official Dance &amp; Entertainment Team</h3>
+            <p class="dept-title">The Friends &amp; Cousins</p>
+            <p class="dept-desc">
+              Responsible for high-energy Sangeet performances, Baraat hype, hiding the groom’s shoes, and taking 4,000 photos.
+            </p>
+          </div>
+
+          <!-- Card 4: The Bride & Groom -->
+          <div class="committee-card">
+            <div class="dept-icon-circle">
+              <span>👰🤵</span>
+            </div>
+            <h3 class="dept-role">Main Characters Trying to Keep Up</h3>
+            <p class="dept-title">The Bride &amp; Groom</p>
+            <p class="dept-desc">
+              Smiling continuously for 6 hours, touching elders’ feet with utmost grace, and praying they don’t trip on heavy lehengas or sherwanis!
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Official Wedding Rules & FAQs -->
+        <div class="wedding-rules-container">
+          <h3 class="rules-heading text-center">📜 Official Shaadi Guidelines</h3>
+          <ul class="rules-list">
+            <li class="rule-item">
+              <span class="rule-bullet">💬</span>
+              <div class="rule-content">
+                <strong>Frequently asked question:</strong>
+                <p>“Beta, shaadi ki date fix ho gayi?”</p>
+              </div>
+            </li>
+            <li class="rule-item">
+              <span class="rule-bullet">📌</span>
+              <div class="rule-content">
+                <strong>Wedding planning rule #1:</strong>
+                <p>There is always one more relative to inform.</p>
+              </div>
+            </li>
+            <li class="rule-item">
+              <span class="rule-bullet">🍲</span>
+              <div class="rule-content">
+                <strong>Wedding planning rule #2:</strong>
+                <p>Nobody knows exactly how many people are coming until the food is served.</p>
+              </div>
+            </li>
+            <li class="rule-item">
+              <span class="rule-bullet">🎶</span>
+              <div class="rule-content">
+                <strong>Wedding planning rule #3:</strong>
+                <p>The dance rehearsals may be optional, but the relatives' dance performances are inevitable.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECTION F: WEDDING COUNTDOWN -->
+    <!-- ========================================================= -->
+    <section id="countdown" class="countdown-section text-center">
+      <div class="container">
+        <span class="section-badge">Save The Date</span>
+        <h2 class="section-title">The Countdown Has Begun! ⏳</h2>
+        <p class="section-subtitle">
+          Counting every single second until Sneha &amp; Rajnish tie the knot!
+        </p>
+        <div class="ornate-divider" aria-hidden="true">
+          <span class="divider-line"></span>
+          <span class="divider-flower">🪷</span>
+          <span class="divider-line"></span>
+        </div>
+
+        <div class="countdown-target-pill">
+          <span class="cal-symbol">🗓️</span>
+          <span>Target Date: <strong>26 November 2026</strong></span>
+        </div>
+
+        <!-- Countdown Display Grid -->
+        <div id="countdownGrid" class="countdown-grid" aria-live="polite">
+          <div class="countdown-box">
+            <span id="countDays" class="count-value">--</span>
+            <span class="count-label">Days</span>
+          </div>
+          <div class="countdown-box">
+            <span id="countHours" class="count-value">--</span>
+            <span class="count-label">Hours</span>
+          </div>
+          <div class="countdown-box">
+            <span id="countMinutes" class="count-value">--</span>
+            <span class="count-label">Minutes</span>
+          </div>
+          <div class="countdown-box">
+            <span id="countSeconds" class="count-value">--</span>
+            <span class="count-label">Seconds</span>
+          </div>
+        </div>
+
+        <!-- Celebratory message container when date arrives -->
+        <div id="celebrationMessage" class="celebration-box hidden" aria-live="polite">
+          <p class="celebration-headline">The big day is here! Let the celebrations begin! 🎉</p>
+          <p class="celebration-sub">May Sneha and Rajnish be blessed with lifelong happiness and love!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECTION G: WEDDING VENUE AND LOCATION -->
+    <!-- ========================================================= -->
+    <section id="venue" class="venue-section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-badge">Where To Be</span>
+          <h2 class="section-title">Wedding Venue &amp; Location 📍</h2>
+          <p class="section-subtitle">We cannot wait to welcome you in Katihar, Bihar!</p>
+          <div class="ornate-divider" aria-hidden="true">
+            <span class="divider-line"></span>
+            <span class="divider-flower">🏛️</span>
+            <span class="divider-line"></span>
+          </div>
+        </div>
+
+        <div class="venue-card-wrapper">
+          <div class="venue-card royal-arch-shape">
+            <div class="venue-icon-header" aria-hidden="true">
+              <span class="venue-mandap-icon">🏰</span>
+            </div>
+
+            <div class="venue-details text-center">
+              <h3 class="venue-name">Officer’s Colony, Ward No. 7</h3>
+              <p class="venue-city">Katihar, Bihar, India</p>
+              
+              <div class="venue-badge-date">
+                <span class="gold-star">✨</span> 26 November 2026 <span class="gold-star">✨</span>
+              </div>
+
+              <div class="venue-action-box">
+                <a 
+                  id="venueMapBtn"
+                  href="https://www.google.com/maps/search/?api=1&query=Officer's+Colony,+Ward+No.+7,+Katihar,+Bihar,+India" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="btn-royal-primary"
+                >
+                  <span class="btn-text">Find the Wedding Venue 📍</span>
+                  <span class="btn-glow"></span>
+                </a>
+              </div>
+
+              <!-- Required respectful family notice -->
+              <div class="venue-notice">
+                <span class="notice-icon">ℹ️</span>
+                <p>Please confirm the wedding schedule with the family before travelling.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECTION H: CUTE INTERACTIVE MOMENTS -->
+    <!-- ========================================================= -->
+    <section id="blessings" class="interactive-moments-section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-badge">Fun &amp; Smiles</span>
+          <h2 class="section-title">Cute Interactive Moments ✨</h2>
+          <p class="section-subtitle">Press the buttons below to shower love and share a laugh!</p>
+          <div class="ornate-divider" aria-hidden="true">
+            <span class="divider-line"></span>
+            <span class="divider-flower">💖</span>
+            <span class="divider-line"></span>
+          </div>
+        </div>
+
+        <div class="interactive-grid">
+          
+          <!-- Interactive 1: Send Blessings -->
+          <div class="interactive-card">
+            <div class="inter-icon">🙏</div>
+            <h3 class="inter-title">Send Your Blessings</h3>
+            <p class="inter-desc">Shower Sneha &amp; Rajnish with love and heartfelt good wishes!</p>
+            <button id="sendBlessingsBtn" class="btn-interactive" type="button">
+              <span class="btn-icon">❤️</span> Send Blessings (<span id="blessingCount">0</span>)
+            </button>
+            <div id="blessingsMessage" class="blessing-reveal-box hidden" role="status">
+              <p class="blessing-text">“Your love and blessings are the most beautiful gifts we could ask for. ❤️”</p>
+            </div>
+          </div>
+
+          <!-- Interactive 2: Wedding Confetti -->
+          <div class="interactive-card">
+            <div class="inter-icon">🎊</div>
+            <h3 class="inter-title">Wedding Confetti</h3>
+            <p class="inter-desc">Let's throw virtual marigolds, golden glitter, and rose petals!</p>
+            <button id="confettiBtn" class="btn-interactive" type="button">
+              <span class="btn-icon">🎉</span> Shower Confetti!
+            </button>
+            <p class="inter-subnote">Click multiple times for maximum celebration!</p>
+          </div>
+
+          <!-- Interactive 3: A Little Wedding Surprise (Jokes) -->
+          <div class="interactive-card">
+            <div class="inter-icon">😄</div>
+            <h3 class="inter-title">A Little Wedding Surprise</h3>
+            <p class="inter-desc">Click for a random, wholesome family-friendly wedding joke!</p>
+            <button id="surpriseJokeBtn" class="btn-interactive" type="button">
+              <span class="btn-icon">✨</span> Tell Me A Wedding Joke
+            </button>
+            <div id="jokeDisplayBox" class="joke-box hidden" role="status">
+              <p id="jokeText" class="joke-text"></p>
+            </div>
+          </div>
+
+          <!-- Interactive 4: Copy Wedding Details -->
+          <div class="interactive-card">
+            <div class="inter-icon">📋</div>
+            <h3 class="inter-title">Copy Wedding Details</h3>
+            <p class="inter-desc">Easily copy the couple names, date, and venue to WhatsApp or notes!</p>
+            <button id="copyDetailsBtn" class="btn-interactive" type="button">
+              <span class="btn-icon">📋</span> Copy Details
+            </button>
+            <div id="copyToast" class="toast-feedback hidden" role="status">
+              <span class="toast-icon">✓</span> Details copied to clipboard!
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECTION I: A SPECIAL MESSAGE FOR BOTH FAMILIES -->
+    <!-- ========================================================= -->
+    <section id="special-message" class="special-message-section">
+      <div class="container">
+        <div class="special-closing-card royal-arch-shape text-center">
+          <div class="crest-ornament" aria-hidden="true">
+            <span>🌿</span><span>💍</span><span>🌿</span>
+          </div>
+
+          <span class="section-badge">From The Bottom Of Our Hearts</span>
+          <h2 class="section-title message-title">Two Families. One New Beginning.</h2>
+          <div class="ornate-divider" aria-hidden="true">
+            <span class="divider-line"></span>
+            <span class="divider-flower">❦</span>
+            <span class="divider-line"></span>
+          </div>
+
+          <div class="closing-message-body">
+            <p class="closing-p">
+              To everyone who has loved us, guided us, supported us, and blessed our families, thank you for being part of this beautiful journey.
+            </p>
+            
+            <p class="closing-p">
+              As Sneha and Rajnish begin their married life, we look forward to celebrating this special occasion surrounded by the warmth of family, the happiness of friends, and the blessings of our elders.
+            </p>
+
+            <p class="closing-highlight">
+              We cannot wait to celebrate with you!
+            </p>
+          </div>
+
+          <div class="closing-signature">
+            <p class="sig-with-love">With love,</p>
+            <p class="sig-couple">Sneha Anand &amp; Rajnish</p>
+            <p class="sig-families">And the Anand Families</p>
+          </div>
+
+          <div class="flower-border-row" aria-hidden="true">
+            <span>🌸</span><span>🌼</span><span>🪷</span><span>🌼</span><span>🌸</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================= -->
+  <!-- SECTION J: FOOTER -->
+  <!-- ========================================================= -->
+  <footer id="footer" class="main-footer text-center">
+    <div class="container">
+      <div class="footer-couple-monogram">
+        <span class="names-line">Sneha Anand <span class="heart-symbol">♥</span> Rajnish</span>
+      </div>
+
+      <p class="footer-date-venue">26 November 2026 | Katihar, Bihar</p>
+
+      <p class="footer-blessing-note">
+        Made with love, family blessings, and a little wedding madness.
+      </p>
+
+      <div class="footer-action-top">
+        <a href="#hero" id="backToTopBtn" class="back-to-top-link" aria-label="Back to top of the page">
+          ↑ Back to Top
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button for Quick Mobile Access -->
+  <button id="floatingTopBtn" class="floating-top-btn" type="button" aria-label="Scroll back to top">
+    ↑
+  </button>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
